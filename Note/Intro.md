@@ -674,8 +674,8 @@ public class ExponentFunction {
         System.out.println("The square of e = " + Math.exp(2));
         System.out.println("lg2 = " + Math.log(2)); // No log2! it's lg2
         System.out.println("log10 2 = " + Math.log10(2));
-        System.out.println("squre of 4 = " + Math.sqrt(4));
-        System.out.println("cube of 8 = " + Math.cbrt(8));
+        System.out.println("squre root of 4 = " + Math.sqrt(4));
+        System.out.println("cube root of 8 = " + Math.cbrt(8));
         System.out.println("squre of 2 = " + Math.pow(2, 2));
     }
 }
