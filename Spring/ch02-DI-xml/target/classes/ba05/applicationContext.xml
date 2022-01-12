@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    声明bean-->
+    <!--
+        引用类型自动注入：spring根据byName, byType 规则给引用类型赋值
+        1. byName（按名称注入）：java类中引用类型的属性名称和spring容器中bean的id名称一样，且数据类型一样，这样的bean可以赋值给引用类型
+            语法：
+            <bean id="xxx" class="yyy" autowire="byName">
+                简单类型属性赋值
+            </bean>
+
+        2. byType（按类型注入）：java类中引用数据类型和bean的class是同源的，这样的bean可以赋值给引用类型
+
+            同源：
+            1. java中引用类型的数据类型和bean的class值是一样的
+            2. java中引用类型的数据类型和bean的class值是父子类关系。
+            3. java中引用类型的数据类型和bean的class值是接口和实现类关系。
+
+            语法：
+            <bean id="xxx" class="yyy" autowire="byType">
+                简单类型属性赋值
+            </bean>
+
+            注意：在xml配置文件中，符合条件的对象，只有一个，多余一个会报错。
+    -->
+    <!--byName自动注入-->
+    <bean id="myStudent" class="com.springproject.ba05.Student" autowire="byType">
+        <property name="name" value="张三"/>
+        <property name="age" value="24"/>
+        <!--引用类型的赋值-->
+        <!--<property name="school" ref="mySchool"/>-->
+    </bean>
+
+    <!--声明School (不用关心声明顺序的)-->
+<!--    <bean id="mySchool" class="com.springproject.ba05.School">-->
+<!--        <property name="name" value="华南吃饭大学"/>-->
+<!--        <property name="address" value="广州市"/>-->
+<!--    </bean>-->
+
+    <!--声明School的子类-->
+    <bean id="primarySchool" class="com.springproject.ba05.PrimarySchool">
+        <property name="name" value="深圳第一小学"/>
+        <property name="address" value="深圳市"/>
+    </bean>
+</beans>

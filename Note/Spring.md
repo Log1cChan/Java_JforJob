@@ -76,9 +76,9 @@ IoC，Inversion of Control ： 控制反转， 是一个理论，一个指导思
 
 
 
-2) IoC的技术实现
+2) I**oC的技术实现**
 
-DI （ 依赖注入） ：Dependency Injection， 缩写是DI . 是IoC的一种技术实现。  程序只需要提供要使用的对象的名称就可以了， 对象如何创建， 如何从容器中查找，获取都由容器内部自己实现。
+**DI （ 依赖注入） ：Dependency Injection**， 缩写是DI . 是IoC的一种技术实现。  程序只需要提供要使用的对象的名称就可以了， 对象如何创建， 如何从容器中查找，获取都由容器内部自己实现。
 
 
 
@@ -336,11 +336,99 @@ spring管理多个配置文件： 常用的是包含关系的配置文件。 项
 
 @Value
 
+三种方法：直接、set、外部文件
+
+```java
+package com.sprinproject.ba02;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 
-3.引用类型赋值
+@Component("myStudent")
+
+public class Student {
+    /**
+     * 简单类型的属性赋值：@Value
+     * @Value: 简单类型属性赋值
+     *      属性：value 简单类型属性值
+     *      位置： 1）在属性定义的上面，无需set方法，推荐使用
+     *            2）在set方法的上面
+     */
+//    @Value(value="李四")
+
+//  使用外部属性文件中的数据，语法：@Value$("{key}")
+    @Value("${myname}")
+    private String name;
+//    @Value(value="20")
+    @Value("${myage}")
+    private int age;
+
+    public Student(){
+        System.out.println("Student类无参数构造方法");
+    }
+//    @Value(value="张三")
+    public void setName(String name) {
+        System.out.println("setName: " + name);
+        this.name = name;
+    }
+//    @Value(value="22")
+    public void setAge(int age) {
+        System.out.println("setAge: " + age);
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--声明组件扫描器，使用注解必须加入这个语句
+        component-scan: 组件扫描器，组件是java对象
+            属性：base-package: 注解在项目中的包名。
+                框架会扫描这个包和子包中的所有类，找类中的所有注解，
+                遇到注解后，按照注解表示的功能，去创建并赋值对象
+    -->
+    <context:component-scan base-package="com.sprinproject.ba02"/>
+
+    <!--读取外部的属性配置文件（Stressed！）
+        property-placeholder: 读取properties这样的文件 Property类
+    -->
+    <context:property-placeholder location="classpath:/myconf.properties"/>
+</beans>
+```
+
+```properties
+myname=章三
+myage=28
+```
+
+3.引用类型赋值(注解没有先后顺序，谁先谁后都是可以的)
 
 @Autowired:   spring提供的注解 . 支持byName， byType
+
+```java
+属性： required: boolean类型属性，默认true
+*              true：spring在启动的时候，创建容器的时候，会检查引用类型是否赋值成功，
+*                      如果失败，会终止程序执行，并报错
+*              false：引用类型如果赋值失败，程序正常执行，但引用类型值为null
+  一般来说true推荐
+```
 
 ​      @Autowired: 默认就是byType
 
@@ -374,7 +462,7 @@ spring作为容器适合管理什么对象 ？
 
 不适合交给spring的对象 ？ 
 
-1）实体类。
+1）实体类。数据经常需要改变哦
 
 2）servlet ， listener ，filter等web中的对象。他们是tomcat创建和管理的。
 
@@ -460,7 +548,7 @@ AOP是一个动态的思想。 在程序运行期间，创建代理（ServciePro
 
 使用框架实现AOP。  实现AOP的框架有很多。 有名的两个
 
-1） Spring ： Spring框架实现AOP思想中的部分功能。  Spring框架实现AOP的操作比较繁琐，比重。
+1） Spring ： Spring框架实现AOP思想中的部分功能。  Spring框架实现AOP的操作比较繁琐，笨重。
 
 2） Aspectj ： 独立的框架，专门是AOP。  属于Eclipse 
 
@@ -778,7 +866,7 @@ spring能集成很多的框架，是spring一个优势功能。 通过集成功�
 
 2. 需要有SqlSessionFactory,  创建SqlSessionFactory对象，才能使用openSession()得到SqlSession对象
 
-   3.数据源DataSource对象， 使用一个更强大，功能更多的连接池对象代替mybatis自己的PooledDataSource
+3. 数据源DataSource对象， 使用一个更强大，功能更多的连接池对象代替mybatis自己的PooledDataSource
 
 
 

@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ch14-spring-mybatis" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/project/pom.xml" />
         <option value="$PROJECT_DIR$/ch02-di-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04-ioc-homework/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03-di-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05-aop-leading/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-aop-leading/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07-aspectj-before/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08-aspectj-afterReturning/pom.xml" />
+        <option value="$PROJECT_DIR$/ch09-aspectj-around/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10-aspectj-afterthrowing/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11-aspectj-after/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12-aspectj-pointcut/pom.xml" />
+        <option value="$PROJECT_DIR$/ch14-spring-mybatis/pom.xml" />
       </list>
     </option>
   </component>

@@ -13,10 +13,4 @@ public class SomeServiceImpl implements SomeService {
     public void doSome() {
         System.out.println("Run the doSome()");
     }
-    /**
-     * @program: SpringProject
-     * @description:
-     * @author: Log1c
-     * @create: 2021-12-14 18:06
-     **/
 }

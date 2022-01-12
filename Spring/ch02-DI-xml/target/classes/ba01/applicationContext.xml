@@ -14,8 +14,16 @@
                     ...
                   </bean>
     -->
+
+<!--    set 注入: 有set就能注入-->
     <bean id="myStudent" class="com.springproject.ba01.Student">
-        <property name="name" value="李四"/>
-        <property name="age" value="20"/>
+        <property name="name" value="李四"/><!--setName("李四")-->
+        <property name="age" value="20"/><!--setAge(22)-->
+        <property name="email" value="lisi@qq.com" /><!--setEmail(...)-->
+    </bean>
+
+    <!--声明日期类-->
+    <bean id="mydate" class="java.util.Date">
+        <property name="time" value="971729127233"/><!--setTime()-->
     </bean>
 </beans>

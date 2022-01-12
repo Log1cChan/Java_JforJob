@@ -6,7 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ch10-aspectj-afterthrowing" />
+        <module name="ch07-aspectj-before" />
+        <module name="ch09-aspectj-around" />
+        <module name="ch14-spring-mybatis" />
         <module name="ch02-DI-xml" />
+        <module name="ch03-di-anno" />
+        <module name="ch11-aspectj-after" />
+        <module name="ch12-aspectj-pointcut" />
+        <module name="ch05-aop-leading (1)" />
+        <module name="ch04-ioc-homework" />
+        <module name="ch08-aspectj-afterReturning" />
+        <module name="ch05-aop-leading" />
         <module name="ch01-first" />
       </profile>
     </annotationProcessing>
@@ -14,6 +25,18 @@
       <module name="ch01-first" target="1.8" />
       <module name="ch02-di-xml" target="8" />
       <module name="ch02-DI-xml" target="1.8" />
+      <module name="ch03-di-anno" target="1.8" />
+      <module name="ch04-ioc-homework" target="1.8" />
+      <module name="ch05-aop-leading" target="1.8" />
+      <module name="ch05-aop-leading (1)" target="1.8" />
+      <module name="ch07-aspectj-before" target="1.8" />
+      <module name="ch08-aspectj-afterReturning" target="1.8" />
+      <module name="ch09-aspectj-around" target="1.8" />
+      <module name="ch10-aspectj-afterthrowing" target="1.8" />
+      <module name="ch11-aspectj-after" target="1.8" />
+      <module name="ch12-aspectj-pointcut" target="1.8" />
+      <module name="ch14-spring-mybatis" target="1.8" />
+      <module name="ch14-spring-mybatis(1)" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

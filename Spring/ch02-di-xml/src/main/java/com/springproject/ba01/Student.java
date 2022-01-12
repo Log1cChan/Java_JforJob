@@ -11,12 +11,17 @@ public class Student {
     private String name;
     private int age;
 
+    public Student() {
+        System.out.println("Student 无参构造方法");
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        System.out.println("setName: " + name);
+        this.name = "Hello" + name;
     }
 
     public int getAge() {
@@ -24,7 +29,12 @@ public class Student {
     }
 
     public void setAge(int age) {
+        System.out.println("setAge: " + age);
         this.age = age;
+    }
+
+    public void setEmail(String email){ // email属性 <property name="email" value="lisi@qq.com" />
+        System.out.println("setEmail: " + email ) ;
     }
 
     @Override

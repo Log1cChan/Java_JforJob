@@ -4,6 +4,17 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/project/ch01-first.iml" filepath="$PROJECT_DIR$/project/ch01-first.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch02-DI-xml/ch02-DI-xml.iml" filepath="$PROJECT_DIR$/ch02-DI-xml/ch02-DI-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch03-di-anno/ch03-di-anno.iml" filepath="$PROJECT_DIR$/ch03-di-anno/ch03-di-anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04-ioc-homework/ch04-ioc-homework.iml" filepath="$PROJECT_DIR$/ch04-ioc-homework/ch04-ioc-homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch05-aop-leading/ch05-aop-leading.iml" filepath="$PROJECT_DIR$/ch05-aop-leading/ch05-aop-leading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06-aop-leading/ch05-aop-leading (1).iml" filepath="$PROJECT_DIR$/ch06-aop-leading/ch05-aop-leading (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch07-aspectj-before/ch07-aspectj-before.iml" filepath="$PROJECT_DIR$/ch07-aspectj-before/ch07-aspectj-before.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch08-aspectj-afterReturning/ch08-aspectj-afterReturning.iml" filepath="$PROJECT_DIR$/ch08-aspectj-afterReturning/ch08-aspectj-afterReturning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch09-aspectj-around/ch09-aspectj-around.iml" filepath="$PROJECT_DIR$/ch09-aspectj-around/ch09-aspectj-around.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10-aspectj-afterthrowing/ch10-aspectj-afterthrowing.iml" filepath="$PROJECT_DIR$/ch10-aspectj-afterthrowing/ch10-aspectj-afterthrowing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch11-aspectj-after/ch11-aspectj-after.iml" filepath="$PROJECT_DIR$/ch11-aspectj-after/ch11-aspectj-after.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch12-aspectj-pointcut/ch12-aspectj-pointcut.iml" filepath="$PROJECT_DIR$/ch12-aspectj-pointcut/ch12-aspectj-pointcut.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch14-spring-mybatis/ch14-spring-mybatis.iml" filepath="$PROJECT_DIR$/ch14-spring-mybatis/ch14-spring-mybatis.iml" />
     </modules>
   </component>
 </project>
